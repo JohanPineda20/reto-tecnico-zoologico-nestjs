@@ -2,6 +2,10 @@ import { Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { AreasModule } from './areas/areas.module';
+import { AnimalsModule } from './animals/animals.module';
+import { SpeciesModule } from './species/species.module';
+import { CommentsModule } from './comments/comments.module';
 
 @Module({
   imports: [
@@ -19,7 +23,7 @@ import { ConfigModule } from '@nestjs/config';
     synchronize: true,
     logging: true
   }), 
-  AuthModule],
+  AuthModule, AreasModule, AnimalsModule, SpeciesModule, CommentsModule],
   controllers: [],
   providers: [],
 })
