@@ -5,7 +5,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 export class Area {
     @PrimaryGeneratedColumn()
     id: number;
-    @Column()
+    @Column({unique: true})
     name: string;
     @OneToMany(() => Species, (species) => species.area, { cascade: ['remove']})
     species: Species[];

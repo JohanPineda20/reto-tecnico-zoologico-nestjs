@@ -10,7 +10,7 @@ export class AreasService {
   constructor(@InjectRepository(Area)
   private areaRepository: Repository<Area>,){}
   async create(createAreaDto: CreateAreaDto) {
-    
+    await this.findByName(createAreaDto.name);
     return this.areaRepository.save(createAreaDto);
   }
 
@@ -34,7 +34,14 @@ export class AreasService {
   }
 
   async remove(id: number) {
-    const area = await this.findOne(id);
+    const area = await this.areaRepository.findOne({where: {id}, relations: ['species', 'species.animals']});
+    if(!area) throw new NotFoundException(`area not found`)
+    for (const species of area.species) {
+      if (species.animals.length > 0) {
+        throw new ConflictException(`Cannot delete area ${area.name} because species ${species.name} has animals`);
+      }
+      delete species.animals
+    }
     return this.areaRepository.remove(area);
   }
   private async findByName(name: string){

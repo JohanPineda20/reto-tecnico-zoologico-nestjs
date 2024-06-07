@@ -7,10 +7,10 @@ export class Species {
     @PrimaryGeneratedColumn()
     id: number;
     
-    @Column()
+    @Column({unique: true})
     name: string;
 
-    @ManyToOne(() => Area, (area) => area.species)
+    @ManyToOne(() => Area, (area) => area.species, {onDelete: 'CASCADE'})
     @JoinColumn({name: 'area_id'})
     area: Area
 
