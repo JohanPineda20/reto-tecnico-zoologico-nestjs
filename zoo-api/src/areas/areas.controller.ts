@@ -33,4 +33,9 @@ export class AreasController {
   remove(@Param('id', ParseIntPipe) id: number) {
     return this.areasService.remove(id);
   }
+  @Auth(RoleEnum.ADMIN, RoleEnum.EMPLOYEE)
+  @Get(':id/animals')
+  findAnimalsByArea(@Param('id', ParseIntPipe) id: number) {
+    return this.areasService.findAnimalsByArea(id);
+  }
 }

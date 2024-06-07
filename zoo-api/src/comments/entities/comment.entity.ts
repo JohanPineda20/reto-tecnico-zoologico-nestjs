@@ -17,14 +17,14 @@ export class Comment {
   @CreateDateColumn()
   createdAt: Date;
 
-  @ManyToOne(() => Animal, animal => animal.comments)
+  @ManyToOne(() => Animal, animal => animal.comments, {onDelete: 'CASCADE'})
   @JoinColumn({name: 'animal_id'})
   animal: Animal;
 
-  @ManyToOne(() => Comment, { nullable: true })
+  @ManyToOne(() => Comment, { nullable: true, onDelete: 'CASCADE'})
   @JoinColumn({name: 'parent_id'})
   parentComment: Comment;
 
-  @OneToMany(() => Comment, comment => comment.parentComment)
+  @OneToMany(() => Comment, comment => comment.parentComment, {cascade: true})
   replies: Comment[];
 }

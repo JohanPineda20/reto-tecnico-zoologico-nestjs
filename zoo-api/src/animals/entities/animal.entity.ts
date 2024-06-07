@@ -1,6 +1,6 @@
 import { Comment } from "src/comments/entities/comment.entity";
 import { Species } from "src/species/entities/species.entity";
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Animal {
@@ -9,6 +9,9 @@ export class Animal {
 
     @Column()
     name: string;
+
+    @CreateDateColumn()
+    createdAt: Date;
 
     @ManyToOne(() => Species, (specie) => specie.animals)
     @JoinColumn({name: 'specie_id'})

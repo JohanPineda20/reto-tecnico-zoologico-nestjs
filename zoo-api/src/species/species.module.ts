@@ -11,5 +11,6 @@ import { UsersModule } from 'src/users/users.module';
   imports: [TypeOrmModule.forFeature([Species]), AuthModule, UsersModule, AreasModule],
   controllers: [SpeciesController],
   providers: [SpeciesService],
+  exports:[SpeciesService]
 })
 export class SpeciesModule {}

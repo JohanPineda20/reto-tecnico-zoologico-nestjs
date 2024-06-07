@@ -15,9 +15,7 @@ export class SpeciesService {
   async create(createSpeciesDto: CreateSpeciesDto) {
     await this.findByName(createSpeciesDto.name)
     const area = await this.areaService.findOne(createSpeciesDto.areaId)
-    if(!area){
-      throw new NotFoundException(`area not found`)
-    }
+    delete area.species
     return this.specieRepository.save({name: createSpeciesDto.name, area});
   }
 
@@ -33,7 +31,6 @@ export class SpeciesService {
 
   async update(id: number, updateSpeciesDto: UpdateSpeciesDto) {
     const specie = await this.findOne(id);
-    console.log(specie.area.species)
     if(updateSpeciesDto.name && specie.name !== updateSpeciesDto.name) {
       await this.findByName(updateSpeciesDto.name)
     }

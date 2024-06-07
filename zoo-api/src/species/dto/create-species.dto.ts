@@ -9,8 +9,8 @@ export class CreateSpeciesDto {
     @Matches(/^[a-zA-Z]+$/, { message: 'name must contain only letters' })
     name: string;
 
-    @IsInt({ message: 'parking_id must be a int' })
-    @IsPositive({ message: 'parking_id must be a positive number' })
-    @Min(1, { message: 'parking_id must be greater than or equal to 1' })
+    @IsInt({ message: 'area_id must be a int' })
+    @IsPositive({ message: 'area_id must be a positive number' })
+    @Min(1, { message: 'area_id must be greater than or equal to 1' })
     areaId: number;
 }

@@ -3,7 +3,7 @@ import { CreateAreaDto } from './dto/create-area.dto';
 import { UpdateAreaDto } from './dto/update-area.dto';
 import { Area } from './entities/area.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { IsNull, Repository } from 'typeorm';
 
 @Injectable()
 export class AreasService {
@@ -43,6 +43,32 @@ export class AreasService {
       delete species.animals
     }
     return this.areaRepository.remove(area);
+  }
+  async findAnimalsByArea(id: number) {
+    const area = await this.areaRepository.findOne({
+      where: {id, species: {animals: {comments: { parentComment: IsNull() }}}}, 
+      relations: ['species', 'species.animals', 'species.animals.comments', 'species.animals.comments.author', 'species.animals.comments.replies', 'species.animals.comments.replies.author'],
+      select: {
+        species: {
+          id: true,
+          name: true,
+          animals: {
+            id: true,
+            name: true,
+            comments: {
+              id: true,
+              body: true,
+              createdAt: true,
+              author: { email: true },
+              replies: {
+                id: true,
+                body: true,
+                createdAt: true,
+                author: { email: true },
+              }}}}}
+    });
+    if(!area) throw new NotFoundException(`area not found`)
+    return area;
   }
   private async findByName(name: string){
     const area = await this.areaRepository.findOneBy({name});
