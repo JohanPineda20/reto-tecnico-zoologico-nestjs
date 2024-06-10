@@ -1,0 +1,749 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Zoologico nestjs",
+    "collectionId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+    "dateExported": "2024-06-10T17:20:30.372Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "03588e77-143b-46bc-9ff8-caa5896ec4d2",
+            "name": "admin",
+            "containerId": "",
+            "created": "2024-06-06T16:01:29.655Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "employee",
+            "containerId": "",
+            "created": "2024-06-06T16:01:35.430Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "zonas",
+            "containerId": "03588e77-143b-46bc-9ff8-caa5896ec4d2",
+            "created": "2024-06-07T16:25:28.169Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "especies",
+            "containerId": "03588e77-143b-46bc-9ff8-caa5896ec4d2",
+            "created": "2024-06-07T16:25:43.838Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "animales",
+            "containerId": "03588e77-143b-46bc-9ff8-caa5896ec4d2",
+            "created": "2024-06-07T17:02:50.790Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": "metrics",
+            "containerId": "",
+            "created": "2024-06-10T15:14:59.996Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "925e01ed-bedb-4516-8c42-061999cad5b2",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener zona por id",
+            "url": "localhost:3000/api/areas/1",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-06-07T14:24:45.096Z",
+            "modified": "2024-06-07T14:24:45.096Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "69824b87-00fb-4e27-a319-27364b4bbce0",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "03588e77-143b-46bc-9ff8-caa5896ec4d2",
+            "name": "crear empleado",
+            "url": "localhost:3000/api/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-06T16:01:02.892Z",
+            "modified": "2024-06-06T17:14:15.301Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"maria\",\n    \"lastname\": \"lopez\",\n    \"dni\": \"0987654321\",\n    \"phone\": \"3124567895\",\n    \"email\": \"maria@gmail.com\",\n    \"password\": \"contraseña\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc2OTM5MTUsImV4cCI6MTcxNzc4MDMxNX0.gjHFELeZLbkgfLsfi3n4WEYHOoW9qUwxJextsB7Y48I"
+            }
+        },
+        {
+            "_id": "07bd85fe-d15a-445f-9106-9dabb3c2b787",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "crear zona",
+            "url": "localhost:3000/api/areas",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-06T20:40:25.797Z",
+            "modified": "2024-06-07T15:51:47.591Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"aves\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "132a7bbc-2fb8-4a6f-acd1-dc16cdba35e4",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "crear especie",
+            "url": "localhost:3000/api/species",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-06T23:02:03.904Z",
+            "modified": "2024-06-07T19:47:21.482Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"pichon\",\n  \"areaId\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "ae803558-336f-4fba-a876-e1ceedbc450b",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener zonas",
+            "url": "localhost:3000/api/areas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-07T14:24:38.050Z",
+            "modified": "2024-06-07T14:24:38.050Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "85155a54-fc0f-4188-affa-018af3333154",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "obtener zonas",
+            "url": "localhost:3000/api/areas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-06T20:46:19.963Z",
+            "modified": "2024-06-06T20:47:34.709Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "81063199-ccf9-4961-ad27-52816756e698",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "obtener especies",
+            "url": "localhost:3000/api/species",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-07T14:22:45.424Z",
+            "modified": "2024-06-07T14:23:23.073Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "4740494c-84d9-4df5-b138-9b60f409077c",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener especies",
+            "url": "localhost:3000/api/species",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-07T14:24:50.197Z",
+            "modified": "2024-06-07T14:24:50.198Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "d6048995-2de3-4db1-b011-9ef4dc1400db",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2024-06-07T14:41:03.543Z",
+            "modified": "2024-06-07T14:41:03.543Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"admin@mail.com\",\n  \"password\": \"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "87106c81-4a6e-4778-8e3e-3eaf837c24e6",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "obtener zona por id",
+            "url": "localhost:3000/api/areas/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-06T20:46:29.607Z",
+            "modified": "2024-06-06T20:47:37.169Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "6e1c8993-f6b1-4ea4-bfea-c2ca7105c130",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "obtener especie por id",
+            "url": "localhost:3000/api/species/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-07T14:25:39.206Z",
+            "modified": "2024-06-07T15:35:45.736Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "eeebb07e-a15f-4c42-b7e2-c3ab0f8f2416",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener especie por id",
+            "url": "localhost:3000/api/species/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-07T14:25:52.771Z",
+            "modified": "2024-06-07T14:25:52.771Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "a16c9833-d33e-4347-93f8-6ba7abdfda41",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "",
+            "name": "logout",
+            "url": "localhost:3000/api/auth/logout",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2024-06-06T16:01:09.725Z",
+            "modified": "2024-06-06T16:01:09.725Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiam9oYW5AZ21haWwuY29tIiwicm9sZSI6IlNPQ0lPIiwiaWF0IjoxNzE3NDQzMzAyLCJleHAiOjE3MTc0NjQ5MDJ9.Y9cZH_J3e_sQ9_L24anr9WFLQHlWTftvm6YVM1VCns0"
+            }
+        },
+        {
+            "_id": "f418b217-5eb4-42aa-8ab6-7bb794571cc4",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "actualizar nombre de zona",
+            "url": "localhost:3000/api/areas/1",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-06-06T20:49:07.544Z",
+            "modified": "2024-06-06T22:25:18.944Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"name\": \"rep\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "c2757c57-77a6-4103-a785-7f744d031c90",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "actualizar especie",
+            "url": "localhost:3000/api/species/2",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-06-07T14:57:56.944Z",
+            "modified": "2024-06-07T15:36:58.253Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"avestruz\",\n  \"areaId\": 2\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "d377ea8b-56d2-47fb-bd0b-abab8729bbad",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener animales",
+            "url": "localhost:3000/api/animals",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-06-07T17:15:05.196Z",
+            "modified": "2024-06-07T17:15:05.196Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "592d249f-89ff-48e6-97f2-be31ea16d06a",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "eliminar zona",
+            "url": "localhost:3000/api/areas/2",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-06-06T20:49:28.675Z",
+            "modified": "2024-06-07T15:52:48.069Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "41094c79-3a7e-4263-bdda-25bcfe15e66b",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7e6b9793-fbef-4870-bd7d-5007d803e500",
+            "name": "eliminar especie",
+            "url": "localhost:3000/api/species/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-06-07T15:31:45.498Z",
+            "modified": "2024-06-07T16:20:45.155Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "9f71772b-3bbe-4ab6-81df-abdabba2fe67",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener animal por id",
+            "url": "localhost:3000/api/animals/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-06-07T17:15:28.696Z",
+            "modified": "2024-06-07T17:15:28.696Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "9b030c55-7f1e-466e-bd73-4aa2380f6f41",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "obtener animales de una zona",
+            "url": "localhost:3000/api/areas/1/animals",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-06-07T21:16:28.412Z",
+            "modified": "2024-06-07T21:16:28.412Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3OTMyMzEsImV4cCI6MTcxNzg3OTYzMX0.MuJk3UULrQQBozn71O-lkvS21Dxs4B_HxoKHdf9kj0o"
+            }
+        },
+        {
+            "_id": "512cedf5-98ba-40f8-a541-b3e10aab7bb0",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "crear animal",
+            "url": "localhost:3000/api/animals",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-07T17:02:56.371Z",
+            "modified": "2024-06-07T17:08:57.119Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"paco\",\n  \"specieId\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "69155b60-9a30-4f1f-aeaf-181c7fef0836",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "crear un comentario para un animal",
+            "url": "localhost:3000/api/animals/1/comments",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-07T22:15:55.947Z",
+            "modified": "2024-06-07T22:15:55.947Z",
+            "headers": []
+        },
+        {
+            "_id": "6e65874f-f061-40ab-9a04-37903b5286a2",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "obtener animales",
+            "url": "localhost:3000/api/animals",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-06-07T17:14:30.128Z",
+            "modified": "2024-06-10T14:53:28.288Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "15db16cc-0695-4e38-8088-01a2fd43f36b",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "actualizar un comentario de un animal",
+            "url": "localhost:3000/api/animals/3/comments/1",
+            "method": "PATCH",
+            "sortNum": 80000,
+            "created": "2024-06-10T15:13:54.109Z",
+            "modified": "2024-06-10T15:13:54.109Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"esta malita\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "d9128fcb-5b26-4158-bb8d-e85cf938fb1a",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "obtener animal por id",
+            "url": "localhost:3000/api/animals/2",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-06-07T17:15:10.989Z",
+            "modified": "2024-06-10T14:52:56.047Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "e99b3277-d5f5-4de4-a528-7a01371fdb76",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "eliminar un comentario de un animal",
+            "url": "localhost:3000/api/animals/3/comments/1",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-06-10T15:13:56.901Z",
+            "modified": "2024-06-10T15:13:56.901Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "3e17c430-8830-4a3a-acdb-38ac5bf8b82c",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "actualizar animal",
+            "url": "localhost:3000/api/animals/1",
+            "method": "PATCH",
+            "sortNum": 100000,
+            "created": "2024-06-07T17:15:58.971Z",
+            "modified": "2024-06-07T20:02:52.594Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"panchito\",\n  \"specieId\": 8\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3MDY3MDUsImV4cCI6MTcxNzc5MzEwNX0._Eoujf4srgcBYDhJon_FooRv2HmM_O6Ye_QdFCd42hw"
+            }
+        },
+        {
+            "_id": "952c1a11-f50e-4548-b007-279bb2c78a84",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "ee0f5e20-8b54-4aab-be3b-75ad0a6ba3f9",
+            "name": "Crear una respuesta a un comentario de un animal",
+            "url": "localhost:3000/api/animals/2/comments/3",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-06-10T15:13:59.101Z",
+            "modified": "2024-06-10T15:13:59.101Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"hola\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "144fe196-7ece-4c0d-8387-949e9412edbb",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "eliminar animal",
+            "url": "localhost:3000/api/animals/1",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2024-06-07T17:16:07.044Z",
+            "modified": "2024-06-07T21:12:04.418Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3OTMyMzEsImV4cCI6MTcxNzg3OTYzMX0.MuJk3UULrQQBozn71O-lkvS21Dxs4B_HxoKHdf9kj0o"
+            }
+        },
+        {
+            "_id": "80ce8c87-acdd-4620-bfc4-9c490745c96b",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "f13623ad-56b5-4ea7-ad90-b742f1da9790",
+            "name": "obtener animales de una zona",
+            "url": "localhost:3000/api/areas/2/animals",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-06-07T21:15:38.362Z",
+            "modified": "2024-06-07T21:29:36.883Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3OTMyMzEsImV4cCI6MTcxNzg3OTYzMX0.MuJk3UULrQQBozn71O-lkvS21Dxs4B_HxoKHdf9kj0o"
+            }
+        },
+        {
+            "_id": "483fce48-b7dd-4383-a6c4-3e9e9f896cad",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "crear un comentario para un animal",
+            "url": "localhost:3000/api/animals/2/comments",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-06-07T22:15:30.331Z",
+            "modified": "2024-06-07T22:32:12.854Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"esta malito\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTc3OTMyMzEsImV4cCI6MTcxNzg3OTYzMX0.MuJk3UULrQQBozn71O-lkvS21Dxs4B_HxoKHdf9kj0o"
+            }
+        },
+        {
+            "_id": "78b9d05d-9bbd-4f7d-85cf-c5c53eef9081",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "actualizar un comentario de un animal",
+            "url": "localhost:3000/api/animals/3/comments/1",
+            "method": "PATCH",
+            "sortNum": 150000,
+            "created": "2024-06-10T14:16:49.995Z",
+            "modified": "2024-06-10T14:24:24.091Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"esta malita\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "416a9592-f5f1-4916-aaab-c6827e5605f0",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "eliminar un comentario de un animal",
+            "url": "localhost:3000/api/animals/3/comments/1",
+            "method": "DELETE",
+            "sortNum": 160000,
+            "created": "2024-06-10T14:31:00.856Z",
+            "modified": "2024-06-10T14:31:32.077Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "fc8b370e-0c01-4b05-858f-8df2a6a5fb13",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "7635ef91-e6f0-4b74-8a52-98e33412d85e",
+            "name": "Crear una respuesta a un comentario de un animal",
+            "url": "localhost:3000/api/animals/2/comments/3",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-06-10T14:47:09.745Z",
+            "modified": "2024-06-10T14:51:58.672Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"hola\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "8ea62df6-00b5-4af2-84be-1efb974c9061",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": "obtener cantidad de animales por zona",
+            "url": "localhost:3000/api/metrics/total-animals-by-area",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2024-06-10T15:15:12.489Z",
+            "modified": "2024-06-10T15:20:19.158Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "f6f76d77-efeb-458f-9c5f-34e1423e9263",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": "obtener cantidad de animales por especie",
+            "url": "localhost:3000/api/metrics/total-animals-by-specie",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-06-10T15:15:36.760Z",
+            "modified": "2024-06-10T15:20:17.914Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "d92da53d-09a6-4f68-bb74-4801489c5aaa",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": "porcentaje de comentarios que han tenido respuestas",
+            "url": "localhost:3000/api/metrics/percentage-of-comments-with-replies",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-06-10T15:15:55.774Z",
+            "modified": "2024-06-10T15:43:11.406Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "65808c2f-b8ed-4897-8128-c66c30e033d8",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": " obtener animales que se registraron en un dia especifico",
+            "url": "localhost:3000/api/metrics/animals?date=2024-06-07",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-06-10T15:15:57.736Z",
+            "modified": "2024-06-10T16:00:43.525Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "date",
+                    "value": "2024-06-07",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        },
+        {
+            "_id": "b054a535-bc58-4614-9dec-94b0f84f4e97",
+            "colId": "17b514e2-2e6e-44b5-ae87-ee7ab7503a8a",
+            "containerId": "c3f8c17f-0e34-43f1-9efc-5a64cc714e53",
+            "name": "buscar zona/especie/animal/comentario por coincidencia",
+            "url": "localhost:3000/api/metrics?search=a",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-06-10T15:18:01.629Z",
+            "modified": "2024-06-10T17:12:38.429Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "search",
+                    "value": "a",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MTgwMjg5OTQsImV4cCI6MTcxODExNTM5NH0.70VCqUMKDbRDEJQlsNc0-p_1Rz6YgoK-V2fByedIXc4"
+            }
+        }
+    ],
+    "ref": "jueyJZ-BI4AlB8lgn3RoYc9Jhq_fhssYGlDY-Z0vVMJa7tLbSvEDB2VY1Ilwa9QtKwtTsOxRoRRmAAKPOIuFmw"
+}
