@@ -3,7 +3,7 @@ import { CreateAreaDto } from './dto/create-area.dto';
 import { UpdateAreaDto } from './dto/update-area.dto';
 import { Area } from './entities/area.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { IsNull, Repository } from 'typeorm';
+import { Brackets, IsNull, Repository } from 'typeorm';
 
 @Injectable()
 export class AreasService {
@@ -75,5 +75,42 @@ export class AreasService {
     if(area){
       throw new ConflictException(`area already exists with name: ${area.name}`);
     }
+  }
+
+  async findNumberOfAnimalsByArea(){
+    const areasWithAnimalCount = await this.areaRepository.createQueryBuilder('area')
+    .select('area.id', 'id')
+    .addSelect('area.name', 'name')
+    .addSelect('COUNT(animal.id)', 'animalCount')
+    .leftJoin('area.species', 'species')
+    .leftJoin('species.animals', 'animal')
+    .groupBy('area.id')
+    .getRawMany();
+
+    return areasWithAnimalCount;
+  }
+
+  async search(search: string){
+    const result = await this.areaRepository.createQueryBuilder('area')
+            .leftJoin('area.species', 'species')
+            .leftJoin('species.animals', 'animals')
+            .leftJoin('animals.comments', 'comments')
+            .leftJoin('comments.author', 'commentAuthor')
+            .leftJoin('comments.replies', 'replies')
+            .leftJoin('replies.author', 'replyAuthor')
+            .addSelect(['species.id','species.name', 
+              'animals.id', 'animals.name', 
+              'comments.id', 'comments.body', 'comments.createdAt', 'commentAuthor.email',
+              'replies.id', 'replies.body', 'replies.createdAt', 'replyAuthor.email'])
+            .where('comments.parentComment IS NULL')
+            .andWhere(new Brackets(qb => {
+              qb.where('area.name LIKE :query', { query: `%${search}%` })
+                .orWhere('species.name LIKE :query', { query: `%${search}%` })
+                .orWhere('animals.name LIKE :query', { query: `%${search}%` })
+                .orWhere('comments.body LIKE :query', { query: `%${search}%` })
+                .orWhere('replies.body LIKE :query', { query: `%${search}%` })
+          }))
+            .getMany();
+    return result;
   }
 }

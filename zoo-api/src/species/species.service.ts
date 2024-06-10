@@ -55,4 +55,14 @@ export class SpeciesService {
       throw new ConflictException(`specie already exists with name: ${specie.name}`);
     }
   }
+  async findNumberOfAnimalsBySpecie(){
+    const speciesWithAnimalCount = await this.specieRepository.createQueryBuilder('species')
+    .select('species.id', 'id',)
+    .addSelect('species.name', 'name')
+    .addSelect('COUNT(animal.id)', 'animalCount')
+    .leftJoin('species.animals', 'animal')
+    .groupBy('species.id')
+    .getRawMany();
+    return speciesWithAnimalCount
+  }
 }

@@ -6,6 +6,7 @@ import { AreasModule } from './areas/areas.module';
 import { AnimalsModule } from './animals/animals.module';
 import { SpeciesModule } from './species/species.module';
 import { CommentsModule } from './comments/comments.module';
+import { MetricsModule } from './metrics/metrics.module';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { CommentsModule } from './comments/comments.module';
     synchronize: true,
     logging: true
   }), 
-  AuthModule, AreasModule, AnimalsModule, SpeciesModule, CommentsModule],
+  AuthModule, AreasModule, AnimalsModule, SpeciesModule, CommentsModule, MetricsModule],
   controllers: [],
   providers: [],
 })

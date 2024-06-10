@@ -7,6 +7,7 @@ import { Auth } from 'src/auth/decorators/auth.decorator';
 import { CreateCommentDto } from 'src/comments/dto/create-comment.dto';
 import { AuthUser } from 'src/auth/decorators/auth-user.decorator';
 import { Payload } from 'src/common/interfaces/payload';
+import { UpdateCommentDto } from 'src/comments/dto/update-comment.dto';
 
 @Controller('animals')
 export class AnimalsController {
@@ -46,17 +47,24 @@ export class AnimalsController {
   @Auth(RoleEnum.ADMIN, RoleEnum.EMPLOYEE)
   @Patch(':id/comments/:commentId')
   updateComment(@Param('id', ParseIntPipe) id: number, 
-                @Body() createCommentDto: CreateCommentDto,
+                @Body() updateCommentDto: UpdateCommentDto,
                 @AuthUser() user: Payload,
                 @Param('commentId', ParseIntPipe) commentId: number) {
-    return this.animalsService.updateComment(id, user, createCommentDto, commentId);
+    return this.animalsService.updateComment(id, user, updateCommentDto, commentId);
   }
   @Auth(RoleEnum.ADMIN, RoleEnum.EMPLOYEE)
   @Delete(':id/comments/:commentId')
-  removeComment(@Param('id', ParseIntPipe) id: number, 
-                @Body() createCommentDto: CreateCommentDto,
+  removeComment(@Param('id', ParseIntPipe) id: number,
                 @AuthUser() user: Payload,
                 @Param('commentId', ParseIntPipe) commentId: number) {
-    return this.animalsService.removeComment(id, user, createCommentDto, commentId);
+    return this.animalsService.removeComment(id, user, commentId);
+  }
+  @Auth(RoleEnum.ADMIN, RoleEnum.EMPLOYEE)
+  @Post(':id/comments/:commentId')
+  createReply(@Param('id', ParseIntPipe) id: number, 
+              @Body() createCommentDto: CreateCommentDto,
+              @AuthUser() user: Payload,
+              @Param('commentId', ParseIntPipe) commentId: number) {
+    return this.animalsService.createReply(id, user, createCommentDto, commentId);
   }
 }

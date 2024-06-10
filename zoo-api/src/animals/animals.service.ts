@@ -1,13 +1,14 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateAnimalDto } from './dto/create-animal.dto';
 import { UpdateAnimalDto } from './dto/update-animal.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Animal } from './entities/animal.entity';
-import { IsNull, Repository } from 'typeorm';
+import { Between, IsNull, Repository } from 'typeorm';
 import { SpeciesService } from 'src/species/species.service';
 import { CommentsService } from 'src/comments/comments.service';
 import { CreateCommentDto } from 'src/comments/dto/create-comment.dto';
 import { Payload } from 'src/common/interfaces/payload';
+import { UpdateCommentDto } from 'src/comments/dto/update-comment.dto';
 
 @Injectable()
 export class AnimalsService {
@@ -82,11 +83,40 @@ export class AnimalsService {
     return await this.commentService.create(animal, user, createCommentDto);
   }
 
-  updateComment(id: number, user: Payload, createCommentDto: CreateCommentDto, commentId: number) {
-    throw new Error('Method not implemented.');
+  updateComment(id: number, user: Payload, updateCommentDto: UpdateCommentDto, commentId: number) {
+    return this.commentService.update(id, user, updateCommentDto, commentId);
   }
   
-  removeComment(id: number, user: Payload, createCommentDto: CreateCommentDto, commentId: number) {
-    throw new Error('Method not implemented.');
+  removeComment(id: number, user: Payload, commentId: number) {
+    return this.commentService.remove(id, user, commentId);
+  }
+  createReply(id: number, user: Payload, createCommentDto: CreateCommentDto, commentId: number) {
+    return this.commentService.createReply(id, user, createCommentDto, commentId);
+  }
+  
+  findAnimalsByDate(date: string) {
+    let startOfDay: Date;
+    let endOfDay: Date;
+    if(date){
+      const regex = /^\d{4}-\d{2}-\d{2}$/;
+      if(!regex.test(date)) throw new ConflictException('Invalid date format. Use YYYY-MM-DD');
+      let dateFormatted = new Date(date);
+      if (isNaN(dateFormatted.getTime())) {
+        throw new ConflictException('Invalid date.');
+      }
+      startOfDay = dateFormatted;
+      endOfDay = new Date(Date.UTC(dateFormatted.getUTCFullYear(), dateFormatted.getUTCMonth(), dateFormatted.getUTCDate(),23,59,59,999));
+    }
+    else{
+      const date = new Date();
+      startOfDay = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 0,0,0,0));
+      endOfDay = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 23,59,59,999));
+    }
+    return this.animalRepository.find({
+      where: {
+        createdAt: Between(startOfDay, endOfDay)
+      },
+      relations: ['specie', 'specie.area']
+    })
   }
 }

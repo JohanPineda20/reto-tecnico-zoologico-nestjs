@@ -12,5 +12,6 @@ import { CommentsModule } from 'src/comments/comments.module';
   imports: [TypeOrmModule.forFeature([Animal]), AuthModule, UsersModule, SpeciesModule, CommentsModule],
   controllers: [AnimalsController],
   providers: [AnimalsService],
+  exports: [AnimalsService]
 })
 export class AnimalsModule {}
